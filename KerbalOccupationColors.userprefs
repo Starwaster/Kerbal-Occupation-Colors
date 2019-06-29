@@ -4,10 +4,11 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Properties\AssemblyInfo.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GameData\KerbalOccupationColors\KerbalOccupationColors.cfg">
     <Files>
       <File FileName="KerbalOccupationColors.cs" Line="2" Column="19" />
-      <File FileName="Properties\AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="Properties\AssemblyInfo.cs" Line="20" Column="34" />
+      <File FileName="GameData\KerbalOccupationColors\KerbalOccupationColors.cfg" Line="3" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
