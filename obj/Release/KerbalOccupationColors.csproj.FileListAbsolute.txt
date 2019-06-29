@@ -1,0 +1,12 @@
+C:\Users\Kevin\Documents\GitHub\Kerbal-Occupation-Colors\bin\Release\KerbalOccupationColors.dll
+C:\Users\Kevin\Documents\GitHub\Kerbal-Occupation-Colors\bin\Release\Assembly-CSharp.dll
+C:\Users\Kevin\Documents\GitHub\Kerbal-Occupation-Colors\bin\Release\UnityEngine.dll
+C:\Users\Kevin\Documents\GitHub\Kerbal-Occupation-Colors\bin\Release\UnityEngine.UI.dll
+C:\Users\Kevin\Documents\GitHub\Kerbal-Occupation-Colors\bin\Release\Assembly-CSharp-firstpass.dll
+C:\Users\Kevin\Documents\GitHub\Kerbal-Occupation-Colors\bin\Release\KSPTrackIR.dll
+C:\Users\Kevin\Documents\GitHub\Kerbal-Occupation-Colors\bin\Release\KSPAssets.dll
+C:\Users\Kevin\Documents\GitHub\Kerbal-Occupation-Colors\bin\Release\Mono.Cecil.dll
+C:\Users\Kevin\Documents\GitHub\Kerbal-Occupation-Colors\bin\Release\Ionic.Zip.dll
+C:\Users\Kevin\Documents\GitHub\Kerbal-Occupation-Colors\bin\Release\TDx.TDxInput.dll
+C:\Users\Kevin\Documents\GitHub\Kerbal-Occupation-Colors\obj\Release\KerbalOccupationColors.csprojResolveAssemblyReference.cache
+C:\Users\Kevin\Documents\GitHub\Kerbal-Occupation-Colors\obj\Release\KerbalOccupationColors.dll
