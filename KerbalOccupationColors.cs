@@ -23,6 +23,11 @@ namespace KerbalOccupationColors
             kerbal.lightR = occupationColor[0];
             kerbal.lightG = occupationColor[1];
             kerbal.lightB = occupationColor[2];
+
+            // Should the new Kerbal get a shiny nifty new Future Suit???
+            if (HighLogic.CurrentGame.Parameters.CustomParams<KOCSettings>().automaticallyApplyFutureSuit)
+                // SCORE!!!!111oneone
+                kerbal.suit = ProtoCrewMember.KerbalSuit.Future;
         }
 
         // KERBAL_OCCUPATION_COLORS
@@ -37,9 +42,9 @@ namespace KerbalOccupationColors
             ConfigNode occupationColors = GameDatabase.Instance.GetConfigNodes("KERBAL_OCCUPATION_COLORS").Last();
             if (occupationColors != null)
             {
-                if (occupationColors.HasNode(occupation.ToLower()))
+                if (occupationColors.HasNode(occupation))
                 {
-                    ConfigNode colors = occupationColors.GetNode(occupation.ToLower());
+                    ConfigNode colors = occupationColors.GetNode(occupation);
                     float red = 0f;
                     float green = 0f;
                     float blue = 0f;
