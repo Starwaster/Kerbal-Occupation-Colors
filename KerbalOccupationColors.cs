@@ -7,17 +7,46 @@ namespace KerbalOccupationColors
 {
     [KSPAddon(KSPAddon.Startup.FlightEditorAndKSC, false)]
     public class KerbalOccupationColors : MonoBehaviour
-    {
+    {                  
         public KerbalOccupationColors()
         {            
         }
 
         public void Start()
         {
-            GameEvents.onKerbalAdded.Add(OnKerbalAdded);
+            GameEvents.onKerbalAdded.Add(KerbalDressCodeEnforcement);
+            GameEvents.OnGameSettingsApplied.Add(OnGameSettingsApplied);
         }
 
-        void OnKerbalAdded(ProtoCrewMember kerbal)
+        void OnGameSettingsApplied()
+        {
+            if (HighLogic.CurrentGame.Parameters.CustomParams<KOCSettings>().enforceDressCodeCompliance)
+            {
+                try
+                {
+                    EnforceDressCodeCompliance();
+                }
+                catch
+                {
+                }
+                // We sent out our dress code memos; disable setting until player requests it again.
+                HighLogic.CurrentGame.Parameters.CustomParams<KOCSettings>().enforceDressCodeCompliance = false;
+            }
+        }
+
+        void EnforceDressCodeCompliance()
+        {
+            KerbalRoster kerbalRoster = HighLogic.fetch.currentGame.CrewRoster;
+            foreach (ProtoCrewMember kerbal in kerbalRoster.Kerbals())
+            {
+                if (kerbal.rosterStatus != ProtoCrewMember.RosterStatus.Assigned || HighLogic.CurrentGame.Parameters.CustomParams<KOCSettings>().dressCodeAppliesToAssignedKerbals)
+                {
+                    KerbalDressCodeEnforcement(kerbal);
+                }
+            }
+        }
+
+        void KerbalDressCodeEnforcement(ProtoCrewMember kerbal)
         {
             Vector3 occupationColor = GetOccupationColor(kerbal.trait);
             kerbal.lightR = occupationColor[0];
@@ -30,13 +59,6 @@ namespace KerbalOccupationColors
                 kerbal.suit = ProtoCrewMember.KerbalSuit.Future;
         }
 
-        // KERBAL_OCCUPATION_COLORS
-        // {
-        //     pilot
-        //     {
-        //         red = 1
-        //     }
-        // }
         public Vector3 GetOccupationColor(string occupation)
         {
             ConfigNode occupationColors = GameDatabase.Instance.GetConfigNodes("KERBAL_OCCUPATION_COLORS").Last();
@@ -62,6 +84,7 @@ namespace KerbalOccupationColors
             }
             else
                 Debug.Log("[KerbalOccupationColors] KERBAL_OCCUPATION_COLORS config not found");
+            // Couldn't find an entry for this occupation or couldn't find config, so return default colors.
             return new Vector3(1f, 0.5176f, 0f);
         }
     }

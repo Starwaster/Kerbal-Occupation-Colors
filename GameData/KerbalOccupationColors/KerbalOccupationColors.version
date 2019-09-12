@@ -1,0 +1,22 @@
+{
+	"NAME": "KerbalOccupationColors",
+	"URL": "https://raw.githubusercontent.com/Starwaster/Kerbal-Occupation-Colors/master/KerbalOccupationColors.version",
+	"VERSION":
+	{
+		"MAJOR": 1,
+		"MINOR": 2,
+		"PATCH": 0
+	},
+	"KSP_VERSION":
+	{
+		"MAJOR": 1,
+		"MINOR": 7,
+		"PATCH": 3
+	},
+	"KSP_VERSION_MIN":
+	{
+		"MAJOR": 1,
+		"MINOR": 99999,
+		"PATCH": 99999
+	}	
+}
