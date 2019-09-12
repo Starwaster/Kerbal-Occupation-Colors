@@ -1,9 +1,10 @@
 # Kerbal Occupation Colors
-Automatically assigns the Future Suit's light colors based on occupation.Red for pilots, gold for engineers and blue for scientists. Requires the Serenity DLC.
+Automatically assigns the Future Suit's light colors based on occupation.Red for pilots, gold for engineers and blue for scientists. Requires the Breaking Ground DLC.
 
 Default colors are fully configurable via the KerbalOccupationColors.cfg file (contents below as an example)
 Occupation titles should be lower case.
 
+```
 KERBAL_OCCUPATION_COLORS
 {
     pilot
@@ -33,3 +34,4 @@ KERBAL_OCCUPATION_COLORS
     }
     // if a mod adds an occupation this mod can deal with it easily. Just add new nodes for each occupation.
 }
+```
