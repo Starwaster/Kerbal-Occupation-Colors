@@ -11,10 +11,10 @@ namespace KerbalOccupationColors
         public bool automaticallyApplyFutureSuit = false;
 
         [GameParameters.CustomParameterUI("Apply Dress Code Enforcement to Kerbals on assignment as well as Kerbals at home?", toolTip = "Attempts to assign Future Suit to Kerbals in the field. May not work unless you save the game then reload it after exiting this menu.")]
-        public bool dressCodeAppliesToAssignedKerbals = false;
+        public bool dressCodeAppliesToAssignedKerbals = true;
 
         [GameParameters.CustomParameterUI("Force occupation color compliance on current hires?", toolTip = "(one time use then setting disables itself)")]
-        public bool enforceDressCodeCompliance = false;
+        public bool enforceDressCodeCompliance = true;
 
         public override string Section { get { return "KOC"; } }
 
